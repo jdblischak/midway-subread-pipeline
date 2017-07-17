@@ -17,7 +17,7 @@ can be adapted to other computing infrastructure.
 2. Clone this repository with `git clone` or download and unzip this
 [zip file][master].
 
-## Description
+## Pipeline
 
 The scripts should be submitted in the following order. Always run
 them from the head node in the root of the project directory.
@@ -47,6 +47,29 @@ them from the head node in the root of the project directory.
     ```bash
     bash submit-subread.sh
     ```
+
+## Directory structure
+
+These scripts expect the following directory structure. Only `fastq/`
+has to be created manually. The scripts will create `bam/`, `counts/`,
+and `genome/`.
+
+.
+├── bam
+├── counts
+├── fastq
+│   ├── YG-172S-S8-8_S125_L006_R1_001.fastq.gz
+│   └── YG-172S-S8-9_S126_L006_R1_001.fastq.gz
+└─── genome
+
+* `fastq/` - Contains raw data in `fastq.gz` files.
+
+* `bam/` - Contains the mapped reads in BAM files.
+
+* `counts/` - Contains the read counts in text files.
+
+* `genome/` - Contains the index genome and the exons coordinates in
+  SAF format.
 
 ## License
 
