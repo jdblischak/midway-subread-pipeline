@@ -54,6 +54,7 @@ These scripts expect the following directory structure. Only `fastq/`
 has to be created manually. The scripts will create `bam/`, `counts/`,
 and `genome/`.
 
+```
 .
 ├── bam
 ├── counts
@@ -61,6 +62,7 @@ and `genome/`.
 │   ├── YG-172S-S8-8_S125_L006_R1_001.fastq.gz
 │   └── YG-172S-S8-9_S126_L006_R1_001.fastq.gz
 └─── genome
+```
 
 * `fastq/` - Contains raw data in `fastq.gz` files.
 
