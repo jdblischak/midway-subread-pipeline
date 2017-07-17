@@ -4,7 +4,7 @@
 #
 # To submit on RCC Midway:
 #
-#   sbatch --mem=2g --partition=broadwl download-exons.R
+#   sbatch --mem=2G --partition=broadwl download-exons.R
 #
 # Notes:
 #

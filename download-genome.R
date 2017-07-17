@@ -4,7 +4,7 @@
 #
 # To submit on RCC Midway:
 #
-#   sbatch --mem=8g --partition=broadwl download-genome.R
+#   sbatch --mem=8G --partition=broadwl download-genome.R
 #
 # Notes:
 #
