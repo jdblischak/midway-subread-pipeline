@@ -25,7 +25,7 @@ them from the head node in the root of the project directory.
 1. Download and index the genome with `download-genome.R`:
 
     ```bash
-    sbatch --mem=8G --partition=broadwl download-genome.R
+    sbatch --mem=12G --partition=broadwl download-genome.R
     ```
 
 2. Download and format the exons with `download-exons.R`:
