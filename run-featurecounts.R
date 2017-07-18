@@ -34,4 +34,5 @@ outfile <- paste0(outdir, "/",
 
 counts <- featureCounts(files = bam, annot.ext = saf)
 
-write.table(counts$counts, file = outfile, quote = FALSE, sep = "\n")
+write.table(counts$counts, file = outfile, quote = FALSE, sep = "\t",
+            col.names = NA)

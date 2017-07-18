@@ -4,7 +4,7 @@
 #
 # To submit on RCC Midway:
 #
-#   sbatch --mem=8g --partition=broadwl run-subread.R <file.fastq.gz>
+#   sbatch --mem=12g --partition=broadwl run-subread.R <file.fastq.gz>
 
 # Input ------------------------------------------------------------------------
 
