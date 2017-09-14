@@ -31,7 +31,7 @@ ensembl_genome <- "GRCh38"
 
 library("Rsubread")
 
-dir.create(outdir, showWarnings = FALSE)
+dir.create(outdir, showWarnings = FALSE, recursive = TRUE)
 
 # Construct the URL to the Ensembl FTP site
 ensembl_ftp <- paste0("ftp://ftp.ensembl.org/pub/release-",

@@ -4,7 +4,7 @@
 #
 # To submit on RCC Midway:
 #
-#   sbatch --mem=4g --partition=broadwl run-featurecounts.R <file.bam>
+#   sbatch --mem=4G --nodes=1 --tasks-per-node=4 --partition=broadwl run-featurecounts.R <file.bam>
 
 # Input ------------------------------------------------------------------------
 
@@ -24,7 +24,7 @@ outdir <- "counts"
 
 library("Rsubread")
 
-dir.create(outdir, showWarnings = FALSE)
+dir.create(outdir, showWarnings = FALSE, recursive = TRUE)
 
 # Create name of output counts file from input BAM file
 outfile <- paste0(outdir, "/",
@@ -32,7 +32,7 @@ outfile <- paste0(outdir, "/",
 
 # Counts reads with featureCounts ----------------------------------------------
 
-counts <- featureCounts(files = bam, annot.ext = saf)
+counts <- featureCounts(files = bam, annot.ext = saf, nthreads = 4)
 
 write.table(counts$counts, file = outfile, quote = FALSE, sep = "\t",
             col.names = NA)

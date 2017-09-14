@@ -4,7 +4,7 @@
 #
 # To submit on RCC Midway:
 #
-#   sbatch --mem=12g --partition=broadwl run-subread.R <file.fastq.gz>
+#   sbatch --mem=12G --nodes=1 --tasks-per-node=4 --partition=broadwl run-subread.R  <file.fastq.gz>
 
 # Input ------------------------------------------------------------------------
 
@@ -24,7 +24,7 @@ outdir <- "bam"
 
 library("Rsubread")
 
-dir.create(outdir, showWarnings = FALSE)
+dir.create(outdir, showWarnings = FALSE, recursive = TRUE)
 
 # Create name of output BAM file from input fastq file
 outfile <- paste0(outdir, "/",
@@ -32,4 +32,5 @@ outfile <- paste0(outdir, "/",
 
 # Map reads with Subread -------------------------------------------------------
 
-align(index = genome_prefix, readfile1 = fastq, output_file = outfile)
+align(index = genome_prefix, readfile1 = fastq, output_file = outfile,
+      nthreads = 4)
