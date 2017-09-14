@@ -7,11 +7,11 @@ can be adapted to other computing infrastructure.
 
 ## Setup
 
-1. Install the R/Bioconductor package [Rsubread][]:
+1. Install the R/Bioconductor packages [biomaRt][] and [Rsubread][]:
 
     ```r
     source("https://bioconductor.org/biocLite.R")
-    biocLite("Rsubread")
+    biocLite(c("biomaRt", "Rsubread"))
     ```
 
 2. Clone this repository with `git clone` or download and unzip this
@@ -84,6 +84,7 @@ guarantees. See the file `LICENSE` for full details.
 * [RCC User Guide][guide]
 * [Gilad Lab Midway Guide][giladlab]
 
+[biomaRt]: https://bioconductor.org/packages/release/bioc/html/biomaRt.html
 [cc0]: https://creativecommons.org/share-your-work/public-domain/cc0/
 [guide]: https://rcc.uchicago.edu/docs/
 [giladlab]: https://github.com/jdblischak/giladlab-midway-guide
